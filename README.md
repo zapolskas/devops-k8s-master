@@ -132,3 +132,5 @@ minikube start --vm-driver=hyperv --memory=4gb --extra-config=apiserver.service-
 - Missed some selectors so couldn't map kubernetes services to pods.
 
 - Had to lookup how to inject Secret value as part of the containers args value.
+
+- No experience with Pod Security Policies
