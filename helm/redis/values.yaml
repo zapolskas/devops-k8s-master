@@ -4,9 +4,11 @@
 
 replicaCount: 1
 
-image:
-  repository: nginx
-  pullPolicy: IfNotPresent
+redisPort: 6379
+data:
+  redisPassword: dmVyeXNlY3VyZXBhc3N3b3Jk
+
+image: redis:5.0.5-alpine
 
 imagePullSecrets: []
 nameOverride: ""

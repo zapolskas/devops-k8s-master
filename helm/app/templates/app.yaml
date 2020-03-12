@@ -7,9 +7,9 @@ metadata:
 spec:
   containers:
   - name: app
-    image: zapolskas/oxylabs-app
+    image: {{ .Values.image }}
     ports:
-    - containerPort: 3000
+    - containerPort: {{ .Values.appPort }}
     # data volume from where app read data written by redis
     volumeMounts:
     - name: data

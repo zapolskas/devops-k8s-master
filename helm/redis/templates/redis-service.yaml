@@ -7,7 +7,7 @@ metadata:
 spec:
   ports:
   - name: redis
-    port: 6379
-    targetPort: 6379
+    port: {{ .Values.redisPort }}
+    targetPort: {{ .Values.redisPort }}
   selector:
     app: redis

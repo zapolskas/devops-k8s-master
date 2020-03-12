@@ -5,10 +5,7 @@
 replicaCount: 1
 
 appPort: 3000
-
-image:
-  repository: nginx
-  pullPolicy: IfNotPresent
+image: zapolskas/oxylabs-app
 
 imagePullSecrets: []
 nameOverride: ""

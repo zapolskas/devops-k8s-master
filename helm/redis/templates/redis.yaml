@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: redis
-  replicas: 1
+  replicas: {{ .Values.replicaCount }}
   template:
     metadata:
       labels:
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: redis
-        image: redis:5.0.5-alpine
+        image: {{ .Values.image }}
         imagePullPolicy: IfNotPresent
         env:
           - name: REDIS_PASSWORD
@@ -24,7 +24,7 @@ spec:
                 key: redisPassword
         args: ["--requirepass $(REDIS_PASSWORD)"]
         ports:
-        - containerPort: 6379
+        - containerPort: {{ .Values.redisPort }}
         # data volume where redis writes data
         volumeMounts:
         - name: data
