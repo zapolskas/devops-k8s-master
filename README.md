@@ -73,6 +73,10 @@ Had to add an extra code line to the package json, so that docker build does not
 "private" : true
 ```
 
+Since node:8.16.1-alpine docker image has vulnerabilities, we will use node:8.17.0-alpine:
+
+<https://snyk.io/test/docker/node%3A8.16.1-alpine>
+
 Had to build docker image from dockerfile and upload it to Docker Registry (DockerHub)
 
 ```ps
